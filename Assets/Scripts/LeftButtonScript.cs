@@ -7,11 +7,13 @@ using UnityEngine.UI;
 public class LeftButtonScript : MonoBehaviour
 {
     public Text textFlag;
+    public Text textScore;
+    public int score;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = 0;
     }
 
     // Update is called once per frame
@@ -31,6 +33,8 @@ public class LeftButtonScript : MonoBehaviour
         {
             // 正解
             // TODO スコア加算
+            score += 10;
+            textScore.text = "スコア : " + score;
         }
         else
         {

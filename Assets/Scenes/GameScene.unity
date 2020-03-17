@@ -553,6 +553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textFlag: {fileID: 1126385931}
+  textScore: {fileID: 401696232}
+  score: 0
 --- !u!1 &861511778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textFlag: {fileID: 1126385931}
+  textScore: {fileID: 401696232}
+  score: 0
 --- !u!1 &1952033050
 GameObject:
   m_ObjectHideFlags: 0

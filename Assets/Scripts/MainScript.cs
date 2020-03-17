@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainScript : MonoBehaviour
@@ -27,6 +28,14 @@ public class MainScript : MonoBehaviour
     {
         // 残り時間をtextTimerに表示
         float v = Mathf.Round(limitTime - Time.time);
+
+        // 残り時間が0以下になったら、ゲームオーバー画面に遷移
+        if (v <= 0)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
+
         textTimer.text = "残り時間 : " + v + "秒";
+
     }
 }

@@ -635,6 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTimer: {fileID: 535307982}
+  textFlag: {fileID: 1126385931}
 --- !u!4 &913740420
 Transform:
   m_ObjectHideFlags: 0

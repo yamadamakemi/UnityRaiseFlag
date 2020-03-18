@@ -35,6 +35,11 @@ public class LeftButtonScript : MonoBehaviour
             // TODO スコア加算
             score += 10;
             textScore.text = "スコア : " + score;
+
+            // 別スクリプト参照
+            GameObject g = GameObject.Find("MainScript");
+            MainScript mainScript = g.GetComponent<MainScript>();
+            mainScript.Reset();
         }
         else
         {

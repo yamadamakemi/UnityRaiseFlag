@@ -13,14 +13,7 @@ public class MainScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // 残り時間の初期値
-        limitTime = 10;
-
-        // 赤か白をランダムに表示
-        // TODO 赤と白を配列に入れて、ランダムで出す
-        int v = Random.Range(0, 5);
-        char v1 = (v < 3) ? '白' : '赤';
-        textFlag.text = v1.ToString();
+        Reset();
     }
 
     // Update is called once per frame
@@ -37,5 +30,20 @@ public class MainScript : MonoBehaviour
 
         textTimer.text = "残り時間 : " + v + "秒";
 
+    }
+
+    // ゲームリセット
+    public void Reset()
+    {
+        Debug.Log("Reset");
+
+        // 残り時間の初期値
+        limitTime = 10;
+
+        // 赤か白をランダムに表示
+        // TODO 赤と白を配列に入れて、ランダムで出す
+        int v = Random.Range(0, 5);
+        char v1 = (v < 3) ? '白' : '赤';
+        textFlag.text = v1.ToString();
     }
 }

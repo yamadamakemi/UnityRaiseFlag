@@ -9,11 +9,18 @@ public class MainScript : MonoBehaviour
     private float limitTime;
     public Text textTimer;
     public Text textFlag;
+    public Text textHighSoce;
+    private int h_Score;
 
     // Start is called before the first frame update
     void Start()
     {
         Reset();
+
+        // ハイスコアを表示
+        h_Score = PlayerPrefs.GetInt("HighScore");
+        Debug.Log(h_Score);
+        textHighSoce.text = "ハイスコア : " + h_Score.ToString();
     }
 
     // Update is called once per frame

@@ -40,6 +40,9 @@ public class LeftButtonScript : MonoBehaviour
             GameObject g = GameObject.Find("MainScript");
             MainScript mainScript = g.GetComponent<MainScript>();
             mainScript.Reset();
+
+            // 時間リセット
+            mainScript.ResetTimer();
         }
         else
         {

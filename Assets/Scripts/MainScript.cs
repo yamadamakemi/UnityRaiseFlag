@@ -47,6 +47,7 @@ public class MainScript : MonoBehaviour
         // 残り時間が0以下になったら、ゲームオーバー画面に遷移
         if (v <= 0.0f)
         {
+            AddHighScore();
             SceneManager.LoadScene("EndScene");
         }
 
@@ -79,5 +80,15 @@ public class MainScript : MonoBehaviour
         // TODO スコア加算
         score += 10;
         textScore.text = "スコア : " + score;
+    }
+
+    // ハイスコア記録
+    public void AddHighScore() {
+        // ハイスコアを更新したら記録
+        int h_score = PlayerPrefs.GetInt("HighScore");
+        if (score > h_score)
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
     }
 }

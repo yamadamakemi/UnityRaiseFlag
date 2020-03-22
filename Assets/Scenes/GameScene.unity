@@ -553,8 +553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textFlag: {fileID: 1126385931}
-  textScore: {fileID: 401696232}
-  score: 0
 --- !u!1 &861511778
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,9 +659,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d07a853d879427bbad398bd90cda3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limitTime: 0
   textTimer: {fileID: 535307982}
   textFlag: {fileID: 1126385931}
   textHighSoce: {fileID: 1778176697}
+  textScore: {fileID: 401696232}
+  score: 0
+  isStop: 0
+  timer: 0
 --- !u!4 &913740420
 Transform:
   m_ObjectHideFlags: 0
@@ -1117,8 +1120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textFlag: {fileID: 1126385931}
-  textScore: {fileID: 401696232}
-  score: 0
 --- !u!1 &1952033050
 GameObject:
   m_ObjectHideFlags: 0

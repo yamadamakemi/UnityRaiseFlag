@@ -7,13 +7,11 @@ using UnityEngine.UI;
 public class RightButtonScript : MonoBehaviour
 {
     public Text textFlag;
-    public Text textScore;
-    public int score;
 
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;
+
     }
 
     // Update is called once per frame
@@ -31,11 +29,6 @@ public class RightButtonScript : MonoBehaviour
         string text = textFlag.text;
         if (text == "赤")
         {
-            // 正解
-            // TODO スコア加算
-            score += 10;
-            textScore.text = "スコア : " + score;
-
             // 別スクリプト参照
             GameObject g = GameObject.Find("MainScript");
             MainScript mainScript = g.GetComponent<MainScript>();
@@ -43,6 +36,9 @@ public class RightButtonScript : MonoBehaviour
 
             // 時間リセット
             mainScript.ResetTimer();
+
+            // スコア加算
+            mainScript.AddScore();
         }
         else
         {

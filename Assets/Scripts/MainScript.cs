@@ -10,6 +10,8 @@ public class MainScript : MonoBehaviour
     public Text textTimer;
     public Text textFlag;
     public Text textHighSoce;
+    public Text textScore;
+    public int score;
     private int h_Score;
     public bool isStop = false;
     public float timer = 0.0f;
@@ -20,6 +22,8 @@ public class MainScript : MonoBehaviour
         Reset();
 
         limitTime = 10.0f;
+
+        score = 0;
 
         // ハイスコアを表示
         h_Score = PlayerPrefs.GetInt("HighScore");
@@ -69,5 +73,11 @@ public class MainScript : MonoBehaviour
         limitTime = 10.0f;
         timer = 0.0f;
         isStop = false;
+    }
+
+    public void AddScore() {
+        // TODO スコア加算
+        score += 10;
+        textScore.text = "スコア : " + score;
     }
 }

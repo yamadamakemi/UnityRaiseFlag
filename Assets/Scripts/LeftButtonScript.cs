@@ -42,6 +42,17 @@ public class LeftButtonScript : MonoBehaviour
         }
         else
         {
+            // 別スクリプト参照
+            GameObject g = GameObject.Find("MainScript");
+            MainScript mainScript = g.GetComponent<MainScript>();
+
+            // ハイスコアを更新したら記録
+            int h_score = PlayerPrefs.GetInt("HighScore");
+            if (mainScript.score > h_score)
+            {
+                PlayerPrefs.SetInt("HighScore", mainScript.score);
+            }
+
             // 不正解
             SceneManager.LoadScene("EndScene");
         }

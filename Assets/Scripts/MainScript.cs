@@ -16,6 +16,8 @@ public class MainScript : MonoBehaviour
     public bool isStop = false;
     public float timer = 0.0f;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,8 +64,17 @@ public class MainScript : MonoBehaviour
         // 赤か白をランダムに表示
         // TODO 赤と白を配列に入れて、ランダムで出す
         int v = Random.Range(0, 5);
-        char v1 = (v < 3) ? '白' : '赤';
-        textFlag.text = v1.ToString();
+        //char v1 = (v < 3) ? '白' : '赤';
+        //textFlag.text = v1.ToString();
+
+        // 左右どちらかの手をあげる
+        if (v < 3)
+        {
+            anim.SetTrigger("isLeft");
+        }
+        else {
+            anim.SetTrigger("isRight");
+        }
     }
 
     // 時間をリセット
